@@ -16,17 +16,6 @@ def is_chained(arr):
         if idx == len(arr)-1:
             return True
 
-def uniq(lst):
-    last = object()
-    for item in lst:
-        if item == last:
-            continue
-        yield item
-        last = item
-
-def sort_and_deduplicate(l):
-    return list(uniq(sorted(l, reverse=True)))
-
 if __name__ == "__main__":
     filename = os.path.join(os.path.dirname(os.path.realpath(__file__)), "input.txt")
     with open(filename) as f:
