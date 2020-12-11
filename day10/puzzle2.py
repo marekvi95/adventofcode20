@@ -30,6 +30,8 @@ if __name__ == "__main__":
     sorted_content = sorted(content)
     sorted_content.append(max(sorted_content)+3)
 
+    print(sorted_content)
+
     for x in sorted_content:
         diff = x - diff
         if diff == 1:
@@ -61,9 +63,28 @@ if __name__ == "__main__":
 
     # print(len(to_be_checked))
 
+    print("diff list", diff_1_list)
+    print(len(diff_1_list))
+
+    diff_11_list = list()
+    
+    lst = list()
+    for n in sorted_content:
+        
+        ln = 0
+        for i in range(0, max(sorted_content)+1):
+            print(n, i)
+            if i == n:
+                ln += 1
+            if ln > 1:
+                lst.append(i)
+                
+    print("lst", lst)
+
     for x in to_be_checked:
         if is_chained(x):
             chained += 1
+            print(x)
 
     print('chained', chained)
     print("--- %s seconds ---" % (time.time() - start_time))
