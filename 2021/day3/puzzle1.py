@@ -14,7 +14,7 @@ gamma = []
 epsilon = []
 
 for d in range(0, len(content[0])):
-    for n in range(0, len(content)-1):
+    for n in range(0, len(content) - 1):
         if int(content[n][d]) == 1:
             ones = ones + 1
         else:
@@ -27,8 +27,8 @@ for d in range(0, len(content[0])):
 # print(gamma)
 # print(epsilon)
 
-gamma_dec = int(''.join(map(str, gamma)), 2)
-epsilon_dec = int(''.join(map(str, epsilon)), 2)
+gamma_dec = int("".join(map(str, gamma)), 2)
+epsilon_dec = int("".join(map(str, epsilon)), 2)
 
 # print(gamma_dec)
 # print(epsilon_dec)
